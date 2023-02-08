@@ -1,0 +1,77 @@
+name: basics
+
+default-extensions:
+  - DuplicateRecordFields 
+  - OverloadedLabels
+  - OverloadedStrings
+  - DataKinds
+  - DeriveAnyClass
+  - NoImplicitPrelude
+  - StrictData
+  - TemplateHaskell
+  - TypeFamilies
+  - QuasiQuotes
+  - GADTs
+  # GHC2021
+  - BangPatterns
+  - DeriveGeneric
+  - FlexibleContexts
+  - FlexibleInstances
+  - ImportQualifiedPost
+  - InstanceSigs
+  - NumericUnderscores
+  - ScopedTypeVariables
+  - StandaloneDeriving
+  - TypeApplications
+  - TypeOperators
+
+dependencies:
+  - base
+  - data-default
+  - freer-extras
+  - plutus-contract
+#   - microlens
+#   - generic-lens
+#   - text
+#   - aeson
+#   - plutus-core
+#   - plutus-tx
+#   - plutus-tx-plugin
+#   - plutus-ledger
+#   - plutus-ledger-api
+#   - plutus-script-utils
+#   - cardano-api
+#   - directory
+
+ghc-options:
+  - -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas -fno-strictness -Wall -fno-spec-constr -fno-specialise
+
+# library:
+#   source-dirs: src
+#   dependencies:
+#     - plutus-contract
+#     - QuickCheck
+#     - tasty
+#     - tasty-quickcheck
+
+executables:
+  hello:
+      main: hello.hs 
+      source-dirs: app
+
+  
+
+#import Plutus.V2.Ledger.Api
+#import Plutus.Prelude
+
+# tests:
+#   anzens-test:
+#     main: Spec.hs
+#     source-dirs: test
+#     dependencies: 
+#       - lens
+#       - QuickCheck
+#       - tasty
+#       - plutus-contract
+#       - plutus-ledger-constraints
+#       - secure-multisig-minting

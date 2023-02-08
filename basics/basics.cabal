@@ -1,0 +1,46 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           basics
+version:        0.0.0
+build-type:     Simple
+
+executable hello
+  main-is: hello.hs
+  other-modules:
+      Paths_basics
+  hs-source-dirs:
+      app
+  default-extensions:
+      DuplicateRecordFields
+      OverloadedLabels
+      OverloadedStrings
+      DataKinds
+      DeriveAnyClass
+      NoImplicitPrelude
+      StrictData
+      TemplateHaskell
+      TypeFamilies
+      QuasiQuotes
+      GADTs
+      BangPatterns
+      DeriveGeneric
+      FlexibleContexts
+      FlexibleInstances
+      ImportQualifiedPost
+      InstanceSigs
+      NumericUnderscores
+      ScopedTypeVariables
+      StandaloneDeriving
+      TypeApplications
+      TypeOperators
+  ghc-options: -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas -fno-strictness -Wall -fno-spec-constr -fno-specialise
+  build-depends:
+      base
+    , data-default
+    , freer-extras
+    , plutus-contract
+  default-language: Haskell2010
