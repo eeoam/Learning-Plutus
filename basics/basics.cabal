@@ -43,4 +43,84 @@ executable hello
     , data-default
     , freer-extras
     , plutus-contract
+    , plutus-ledger
+    , text
+  default-language: Haskell2010
+
+executable hello-contract
+  main-is: hello-contract.hs
+  other-modules:
+      Paths_basics
+  hs-source-dirs:
+      app
+  default-extensions:
+      DuplicateRecordFields
+      OverloadedLabels
+      OverloadedStrings
+      DataKinds
+      DeriveAnyClass
+      NoImplicitPrelude
+      StrictData
+      TemplateHaskell
+      TypeFamilies
+      QuasiQuotes
+      GADTs
+      BangPatterns
+      DeriveGeneric
+      FlexibleContexts
+      FlexibleInstances
+      ImportQualifiedPost
+      InstanceSigs
+      NumericUnderscores
+      ScopedTypeVariables
+      StandaloneDeriving
+      TypeApplications
+      TypeOperators
+  ghc-options: -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas -fno-strictness -Wall -fno-spec-constr -fno-specialise
+  build-depends:
+      base
+    , data-default
+    , freer-extras
+    , plutus-contract
+    , plutus-ledger
+    , text
+  default-language: Haskell2010
+
+executable send-ada
+  main-is: send-ada.hs
+  other-modules:
+      Paths_basics
+  hs-source-dirs:
+      app
+  default-extensions:
+      DuplicateRecordFields
+      OverloadedLabels
+      OverloadedStrings
+      DataKinds
+      DeriveAnyClass
+      NoImplicitPrelude
+      StrictData
+      TemplateHaskell
+      TypeFamilies
+      QuasiQuotes
+      GADTs
+      BangPatterns
+      DeriveGeneric
+      FlexibleContexts
+      FlexibleInstances
+      ImportQualifiedPost
+      InstanceSigs
+      NumericUnderscores
+      ScopedTypeVariables
+      StandaloneDeriving
+      TypeApplications
+      TypeOperators
+  ghc-options: -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas -fno-strictness -Wall -fno-spec-constr -fno-specialise
+  build-depends:
+      base
+    , data-default
+    , freer-extras
+    , plutus-contract
+    , plutus-ledger
+    , text
   default-language: Haskell2010

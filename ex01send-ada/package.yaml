@@ -1,4 +1,4 @@
-name: basics
+name: ex01send-ada
 
 default-extensions:
   - DuplicateRecordFields 
@@ -27,7 +27,6 @@ default-extensions:
 
 dependencies:
   - base
-  - text
   - data-default
   - freer-extras
   - plutus-contract
@@ -39,7 +38,6 @@ dependencies:
 #   - plutus-core
 #   - plutus-tx
 #   - plutus-tx-plugin
-
 #   - plutus-ledger-api
 #   - plutus-script-utils
 #   - cardano-api
@@ -58,16 +56,9 @@ ghc-options:
 
 executables:
   hello:
-      main: hello.hs 
+      main: send-ada.hs 
       source-dirs: app
 
-  send-ada:
-      main: send-ada.hs
-      source-dirs: app
-
-  hello-contract:
-      main: hello-contract.hs
-      source-dirs: app
   
 
 #import Plutus.V2.Ledger.Api
