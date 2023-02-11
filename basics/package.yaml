@@ -32,6 +32,7 @@ dependencies:
   - freer-extras
   - plutus-contract
   - plutus-ledger
+  - plutus-ledger-constraints
 #   - microlens
 #   - generic-lens
 #   - text
@@ -69,6 +70,9 @@ executables:
       main: hello-contract.hs
       source-dirs: app
   
+  send-ada-contract:
+      main: send-ada-contract.hs
+      source-dirs: app
 
 #import Plutus.V2.Ledger.Api
 #import Plutus.Prelude

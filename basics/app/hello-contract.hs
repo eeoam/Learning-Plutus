@@ -9,7 +9,8 @@ import Control.Monad.Freer.Extras qualified as Extras
 import Ledger.Ada qualified as Ada
 import Plutus.Trace.Emulator qualified as Trace
 import Plutus.Contract.Test qualified as Test
-import Plutus.Contract as Contract
+import Plutus.Contract (Contract)
+import Plutus.Contract qualified as Contract
 
 main :: Prel.IO ()
 main = Trace.runEmulatorTraceIO' Default.def Default.def trace
