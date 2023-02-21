@@ -5,7 +5,8 @@ default-extensions:
   - OverloadedLabels
   - OverloadedStrings
   - DataKinds
-  - DeriveAnyClass
+  #- DeriveAnyClass
+  - DerivingStrategies
   - NoImplicitPrelude
   - StrictData
   - TemplateHaskell
@@ -27,15 +28,15 @@ default-extensions:
 
 dependencies:
   - base
-  - text
+  - lens
+  - text # or  microlens or generic-lens
   - data-default
   - freer-extras
   - plutus-contract
   - plutus-ledger
   - plutus-ledger-constraints
-#   - microlens
-#   - generic-lens
-#   - text
+  - QuickCheck
+
 #   - aeson
 #   - plutus-core
 #   - plutus-tx
@@ -72,6 +73,14 @@ executables:
   
   send-ada-contract:
       main: send-ada-contract.hs
+      source-dirs: app
+
+  send-ada-test:
+      main: send-ada-test.hs
+      source-dirs: app
+
+  send-ada-endpoint:
+      main: send-ada-endpoint.hs
       source-dirs: app
 
 #import Plutus.V2.Ledger.Api

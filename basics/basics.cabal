@@ -19,7 +19,7 @@ executable hello
       OverloadedLabels
       OverloadedStrings
       DataKinds
-      DeriveAnyClass
+      DerivingStrategies
       NoImplicitPrelude
       StrictData
       TemplateHaskell
@@ -39,9 +39,11 @@ executable hello
       TypeOperators
   ghc-options: -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas -fno-strictness -Wall -fno-spec-constr -fno-specialise
   build-depends:
-      base
+      QuickCheck
+    , base
     , data-default
     , freer-extras
+    , lens
     , plutus-contract
     , plutus-ledger
     , plutus-ledger-constraints
@@ -59,7 +61,7 @@ executable hello-contract
       OverloadedLabels
       OverloadedStrings
       DataKinds
-      DeriveAnyClass
+      DerivingStrategies
       NoImplicitPrelude
       StrictData
       TemplateHaskell
@@ -79,9 +81,11 @@ executable hello-contract
       TypeOperators
   ghc-options: -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas -fno-strictness -Wall -fno-spec-constr -fno-specialise
   build-depends:
-      base
+      QuickCheck
+    , base
     , data-default
     , freer-extras
+    , lens
     , plutus-contract
     , plutus-ledger
     , plutus-ledger-constraints
@@ -99,7 +103,7 @@ executable send-ada
       OverloadedLabels
       OverloadedStrings
       DataKinds
-      DeriveAnyClass
+      DerivingStrategies
       NoImplicitPrelude
       StrictData
       TemplateHaskell
@@ -119,9 +123,11 @@ executable send-ada
       TypeOperators
   ghc-options: -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas -fno-strictness -Wall -fno-spec-constr -fno-specialise
   build-depends:
-      base
+      QuickCheck
+    , base
     , data-default
     , freer-extras
+    , lens
     , plutus-contract
     , plutus-ledger
     , plutus-ledger-constraints
@@ -139,7 +145,7 @@ executable send-ada-contract
       OverloadedLabels
       OverloadedStrings
       DataKinds
-      DeriveAnyClass
+      DerivingStrategies
       NoImplicitPrelude
       StrictData
       TemplateHaskell
@@ -159,9 +165,95 @@ executable send-ada-contract
       TypeOperators
   ghc-options: -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas -fno-strictness -Wall -fno-spec-constr -fno-specialise
   build-depends:
-      base
+      QuickCheck
+    , base
     , data-default
     , freer-extras
+    , lens
+    , plutus-contract
+    , plutus-ledger
+    , plutus-ledger-constraints
+    , text
+  default-language: Haskell2010
+
+executable send-ada-endpoint
+  main-is: send-ada-endpoint.hs
+  other-modules:
+      Paths_basics
+  hs-source-dirs:
+      app
+  default-extensions:
+      DuplicateRecordFields
+      OverloadedLabels
+      OverloadedStrings
+      DataKinds
+      DerivingStrategies
+      NoImplicitPrelude
+      StrictData
+      TemplateHaskell
+      TypeFamilies
+      QuasiQuotes
+      GADTs
+      BangPatterns
+      DeriveGeneric
+      FlexibleContexts
+      FlexibleInstances
+      ImportQualifiedPost
+      InstanceSigs
+      NumericUnderscores
+      ScopedTypeVariables
+      StandaloneDeriving
+      TypeApplications
+      TypeOperators
+  ghc-options: -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas -fno-strictness -Wall -fno-spec-constr -fno-specialise
+  build-depends:
+      QuickCheck
+    , base
+    , data-default
+    , freer-extras
+    , lens
+    , plutus-contract
+    , plutus-ledger
+    , plutus-ledger-constraints
+    , text
+  default-language: Haskell2010
+
+executable send-ada-test
+  main-is: send-ada-test.hs
+  other-modules:
+      Paths_basics
+  hs-source-dirs:
+      app
+  default-extensions:
+      DuplicateRecordFields
+      OverloadedLabels
+      OverloadedStrings
+      DataKinds
+      DerivingStrategies
+      NoImplicitPrelude
+      StrictData
+      TemplateHaskell
+      TypeFamilies
+      QuasiQuotes
+      GADTs
+      BangPatterns
+      DeriveGeneric
+      FlexibleContexts
+      FlexibleInstances
+      ImportQualifiedPost
+      InstanceSigs
+      NumericUnderscores
+      ScopedTypeVariables
+      StandaloneDeriving
+      TypeApplications
+      TypeOperators
+  ghc-options: -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas -fno-strictness -Wall -fno-spec-constr -fno-specialise
+  build-depends:
+      QuickCheck
+    , base
+    , data-default
+    , freer-extras
+    , lens
     , plutus-contract
     , plutus-ledger
     , plutus-ledger-constraints
