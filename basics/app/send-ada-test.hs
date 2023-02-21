@@ -40,7 +40,8 @@ instance Model.ContractModel MODEL where
         Model.delay 1
 
     arbitraryAction :: Model.ModelState MODEL -> QCheck.Gen (Model.Action MODEL) 
-    arbitraryAction _ = QCheck.oneof [ Give <$> els [ Test.w1 ] <*> els [ Test.w2 ] ]
+    arbitraryAction _ 
+        = QCheck.oneof [ Give <$> els [ Test.w1 ] <*> els [ Test.w2 ] ]
         where els = QCheck.elements
 
     initialState :: MODEL
@@ -65,7 +66,11 @@ instance Model.ContractModel MODEL where
     instanceWallet :: Model.ContractInstanceKey MODEL w s e p -> Test.Wallet
     instanceWallet (KEY w) = w
 
-    instanceContract :: (Model.SymToken -> Ledger.AssetClass) -> Model.ContractInstanceKey MODEL w s e p -> p -> Contract w s e ()
+    instanceContract 
+        :: (Model.SymToken -> Ledger.AssetClass) 
+        -> Model.ContractInstanceKey MODEL w s e p 
+        -> p 
+        -> Contract w s e ()
     instanceContract _ (KEY _) _ = go
     
 deriving instance Prel.Show (Model.ContractInstanceKey MODEL w s e p)
