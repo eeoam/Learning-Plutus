@@ -28,22 +28,26 @@ default-extensions:
 
 dependencies:
   - base
-  - lens
-  - text # or  microlens or generic-lens
+  - lens # or  microlens or generic-lens
+  - text 
   - data-default
   - freer-extras
   - plutus-contract
   - plutus-ledger
   - plutus-ledger-constraints
   - QuickCheck
+  - plutus-ledger-api
+  - plutus-tx
+  - plutus-script-utils
+  - plutus-tx-plugin
 
 #   - aeson
 #   - plutus-core
-#   - plutus-tx
-#   - plutus-tx-plugin
 
-#   - plutus-ledger-api
-#   - plutus-script-utils
+
+
+
+
 #   - cardano-api
 #   - directory
 
@@ -75,13 +79,19 @@ executables:
       main: send-ada-contract.hs
       source-dirs: app
 
+  send-ada-endpoint:
+      main: send-ada-endpoint.hs
+      source-dirs: app
+
   send-ada-test:
       main: send-ada-test.hs
       source-dirs: app
 
-  send-ada-endpoint:
-      main: send-ada-endpoint.hs
+  mint:
+      main: mint.hs
       source-dirs: app
+
+
 
 #import Plutus.V2.Ledger.Api
 #import Plutus.Prelude

@@ -46,7 +46,11 @@ executable hello
     , lens
     , plutus-contract
     , plutus-ledger
+    , plutus-ledger-api
     , plutus-ledger-constraints
+    , plutus-script-utils
+    , plutus-tx
+    , plutus-tx-plugin
     , text
   default-language: Haskell2010
 
@@ -88,7 +92,57 @@ executable hello-contract
     , lens
     , plutus-contract
     , plutus-ledger
+    , plutus-ledger-api
     , plutus-ledger-constraints
+    , plutus-script-utils
+    , plutus-tx
+    , plutus-tx-plugin
+    , text
+  default-language: Haskell2010
+
+executable mint
+  main-is: mint.hs
+  other-modules:
+      Paths_basics
+  hs-source-dirs:
+      app
+  default-extensions:
+      DuplicateRecordFields
+      OverloadedLabels
+      OverloadedStrings
+      DataKinds
+      DerivingStrategies
+      NoImplicitPrelude
+      StrictData
+      TemplateHaskell
+      TypeFamilies
+      QuasiQuotes
+      GADTs
+      BangPatterns
+      DeriveGeneric
+      FlexibleContexts
+      FlexibleInstances
+      ImportQualifiedPost
+      InstanceSigs
+      NumericUnderscores
+      ScopedTypeVariables
+      StandaloneDeriving
+      TypeApplications
+      TypeOperators
+  ghc-options: -fobject-code -fno-ignore-interface-pragmas -fno-omit-interface-pragmas -fno-strictness -Wall -fno-spec-constr -fno-specialise
+  build-depends:
+      QuickCheck
+    , base
+    , data-default
+    , freer-extras
+    , lens
+    , plutus-contract
+    , plutus-ledger
+    , plutus-ledger-api
+    , plutus-ledger-constraints
+    , plutus-script-utils
+    , plutus-tx
+    , plutus-tx-plugin
     , text
   default-language: Haskell2010
 
@@ -130,7 +184,11 @@ executable send-ada
     , lens
     , plutus-contract
     , plutus-ledger
+    , plutus-ledger-api
     , plutus-ledger-constraints
+    , plutus-script-utils
+    , plutus-tx
+    , plutus-tx-plugin
     , text
   default-language: Haskell2010
 
@@ -172,7 +230,11 @@ executable send-ada-contract
     , lens
     , plutus-contract
     , plutus-ledger
+    , plutus-ledger-api
     , plutus-ledger-constraints
+    , plutus-script-utils
+    , plutus-tx
+    , plutus-tx-plugin
     , text
   default-language: Haskell2010
 
@@ -214,7 +276,11 @@ executable send-ada-endpoint
     , lens
     , plutus-contract
     , plutus-ledger
+    , plutus-ledger-api
     , plutus-ledger-constraints
+    , plutus-script-utils
+    , plutus-tx
+    , plutus-tx-plugin
     , text
   default-language: Haskell2010
 
@@ -256,6 +322,10 @@ executable send-ada-test
     , lens
     , plutus-contract
     , plutus-ledger
+    , plutus-ledger-api
     , plutus-ledger-constraints
+    , plutus-script-utils
+    , plutus-tx
+    , plutus-tx-plugin
     , text
   default-language: Haskell2010

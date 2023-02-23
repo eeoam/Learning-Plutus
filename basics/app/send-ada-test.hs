@@ -98,7 +98,9 @@ go :: Contract () Schema Text ()
 go = (Contract.awaitPromise $ Contract.endpoint @"give" send_ada)  >> go
 
 --send_ada :: Ledger.PaymentPubKeyHash -> Contract () Schema Text ()
-send_ada :: Contract.AsContractError e => Ledger.PaymentPubKeyHash -> Contract w s e ()
+send_ada 
+    :: Contract.AsContractError e 
+    => Ledger.PaymentPubKeyHash -> Contract w s e ()
 send_ada ppkh = do
     let ada = Ada.lovelaceValueOf 1_000_000 
     let constraint = Constraints.mustPayToPubKey ppkh ada
