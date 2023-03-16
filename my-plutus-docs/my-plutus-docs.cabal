@@ -1,0 +1,55 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.35.1.
+--
+-- see: https://github.com/sol/hpack
+
+name:           my-plutus-docs
+version:        0.0.0
+build-type:     Simple
+
+library
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_my_plutus_docs
+  hs-source-dirs:
+      src
+  default-extensions:
+      DuplicateRecordFields
+      OverloadedLabels
+      OverloadedStrings
+      DataKinds
+      DerivingStrategies
+      NoImplicitPrelude
+      StrictData
+      TemplateHaskell
+      TypeFamilies
+      QuasiQuotes
+      GADTs
+      BangPatterns
+      DeriveGeneric
+      FlexibleContexts
+      FlexibleInstances
+      ImportQualifiedPost
+      InstanceSigs
+      NumericUnderscores
+      ScopedTypeVariables
+      StandaloneDeriving
+      TypeApplications
+      TypeOperators
+  build-depends:
+      QuickCheck
+    , base
+    , data-default
+    , freer-extras
+    , lens
+    , plutus-contract
+    , plutus-ledger
+    , plutus-ledger-api
+    , plutus-ledger-constraints
+    , plutus-script-utils
+    , plutus-tx
+    , plutus-tx-plugin
+    , text
+  default-language: Haskell2010

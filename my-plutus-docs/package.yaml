@@ -1,0 +1,48 @@
+name: my-plutus-docs
+
+default-extensions:
+  - DuplicateRecordFields 
+  - OverloadedLabels
+  - OverloadedStrings
+  - DataKinds
+  #- DeriveAnyClass
+  - DerivingStrategies
+  - NoImplicitPrelude
+  - StrictData
+  - TemplateHaskell
+  - TypeFamilies
+  - QuasiQuotes
+  - GADTs
+  # GHC2021
+  - BangPatterns
+  - DeriveGeneric
+  - FlexibleContexts
+  - FlexibleInstances
+  - ImportQualifiedPost
+  - InstanceSigs
+  - NumericUnderscores
+  - ScopedTypeVariables
+  - StandaloneDeriving
+  - TypeApplications
+  - TypeOperators
+
+dependencies:
+  - base
+  - lens # or  microlens or generic-lens
+  - text 
+  - data-default
+  - freer-extras
+  - plutus-contract
+  - plutus-ledger
+  - plutus-ledger-constraints
+  - QuickCheck
+  - plutus-ledger-api
+  - plutus-tx
+  - plutus-script-utils
+  - plutus-tx-plugin
+
+#   - aeson
+#   - plutus-core
+
+library:
+  source-dirs: src
